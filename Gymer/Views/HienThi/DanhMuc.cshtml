@@ -1,0 +1,10 @@
+﻿@using Gymer.Models;
+@model List<DanhMuc>
+
+@foreach(var item in Model)
+{
+    <li><a href="@Url.Action("BaiTap","BaiTapGym", new {@id = item.MaDanhMuc })" class="drop-text">@item.TenDanhMuc</a></li>
+}
+
+
+

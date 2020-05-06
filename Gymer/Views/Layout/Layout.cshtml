@@ -1,0 +1,354 @@
+﻿@{
+    Layout = null;
+}
+    
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>FITNESS.com</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Cycle Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+
+    <link rel="stylesheet" href="~/Content/Layout/css/bootstrap.css">
+
+    <link href="~/Content/Layout/css/css_slider.css" type="text/css" rel="stylesheet" media="all">
+
+    <link href="~/Content/Layout/css/Stylecss.css" rel="stylesheet" />
+
+    <link href="~/Content/Layout/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="~/Content/DangNhap/css/font-awesome.css" rel="stylesheet" />
+
+
+    <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext"
+          rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=latin-ext"
+          rel="stylesheet">
+    <!--Css bai viet-->
+    <link href="~/Content/Layout/Menu.css" rel="stylesheet" />
+    <link href="~/Content/IconMXH/Icon.css" rel="stylesheet" />
+
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+
+</head>
+
+<body id="home">
+
+
+    <script type="text/javascript">
+        function Plugin(option) {
+            return this.each(function () {
+                var $this = $(this)
+                var data = $this.data('bs.alert')
+
+                if (!data) $this.data('bs.alert', (data = new Alert(this)))
+                if (typeof option == 'string') data[option].call($this)
+
+                var dungyen = 0;
+                var dichuyen = "20px";
+                var diemchuyen = "text-wh text-uppercase mb-md-4 mb-3" + "class";
+                if (dungyen == diemchuyen) {
+                    dichuyen++;
+                    var diemtoi = "text-center text-wh py-sm-3 py-3";
+                }
+
+
+            })
+        }
+
+        var old = $.fn.alert
+
+        $.fn.alert = Plugin
+        $.fn.alert.Constructor = Alert
+    </script>
+
+
+    <nav id="fixNav">
+        <div id="home">
+
+            <header id="chuyenmau" ">
+                <div class="container-fluid">
+                    <div class="header d-md-flex justify-content-between align-items-center py-sm-3 py-2 px-xl-5 px-lg-3 px-2">
+                        <!-- logo -->
+                        <div id="logo" style="width:5px; float : left;">
+                            <h1><a href="/HienThi/Index">FITNESS</a></h1>
+                        </div>
+                        <!-- //logo -->
+                        <div class="nav_w3ls" style="font-family: Arial">
+                            <nav>
+                                <label for="drop" class="toggle toogle-2">Menu</label>
+                                <input type="checkbox" id="drop" />
+                                <ul class="menu">
+                                    <li class="active"><a href="/HienThi/Index"><i class="fa fa-home" style="font-size: 20px; color: white"></i></a></li>
+                                    <li class="mx-lg-4 mx-md-3 my-md-0 my-2">
+                                        <label for="drop-2" class="toggle">
+                                            Dropdown <span class="fa fa-angle-down" aria-hidden="true"></span>
+                                        </label>
+                                        <a href="/LichTapGym/Index">Lịch tập gym <span class="" aria-hidden="true"></span></a>
+                                        <input type="checkbox" id="drop-2" />
+                                        <ul>
+                                        </ul>
+
+                                    </li>
+                                    <li>
+                                        <!-- First Tier Drop Down -->
+                                        <label for="drop-2" class="toggle">
+                                            Dropdown <span class="fa fa-angle-down" aria-hidden="true"></span>
+                                        </label>
+                                        <a href="#">Bài tập Gym <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                                        <input type="checkbox" id="drop-2" />
+                                        <ul>
+                                            @Html.Action("DanhMuc", "HienThi")
+                                        </ul>
+                                    </li>
+                                    <li class="ml-lg-4 ml-md-3 my-md-0 my-2 "><a href="@Url.Action("BaiVietDD","HienThi")">Dinh Dưỡng Thể Hình</a></li>
+                                    <li class="ml-lg-4 ml-md-3 my-md-0 my-2"><a href="/BaiVietKT/Index">Bài Viết</a></li>
+                                    <li class="ml-lg-4 ml-md-3 my-md-0 my-2"><a href="#contact">Góp ý - Phản hồi&nbsp;&nbsp;&nbsp; </a></li>
+                                    <li>
+                                        @Html.Action("CongCu", "NguoiDung")
+                                    </li>
+                                    <li>
+                                        <a href="#" data-toggle="modal" data-target="#vy"><i class="fa fa-search"></i></a>
+                                        <div class="modal fade" id="vy" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        ...
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    @*<li>
+                                            <button onclick="document.getElementById('chuyenmau').style.backgroundColor=''">Trong suốt</button>
+                                            <button onclick="document.getElementById('chuyenmau').style.backgroundColor='darkslategray'">Bật màu</button>
+                                        </li>*@
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- //nav -->
+                    </div>
+                </div>
+            </header>
+
+
+            <!-- //header -->
+            <!-- banner -->
+
+        </div>
+    </nav>
+    
+
+    <!-- //main -->
+    @RenderBody()
+    <div class="gallery py-5" id="gallery">
+        <div class="container py-xl-5 py-lg-3">
+            <h3 style="color:dodgerblue; font-family:Arial; font-size:40px">
+                <b> Đến với FITNESS chúng tôi sẽ giúp bạn thay đổi bản thân</b>
+            </h3>
+            <div class="news-grids text-center pt-xl-4">
+                <div class="row news-grids text-center">
+                    <div class="col-md-4 gal-img">
+                        <a href="#"><img src="~/Content/8/a.jpg" alt="news image" class="img-fluid"></a>
+                        <a href="#"><img src="~/Content/8/b.png" alt="news image" class="img-fluid mt-4"></a>
+                        <a href="#"><img src="~/Content/8/c.jpg" alt="news image" class="img-fluid mt-4"></a>
+                    </div>
+                    <div class="col-md-4 gal-img my-md-0 my-4">
+                        <a href="#"><img src="~/Content/8/d.jpg" alt="news image" class="img-fluid"></a>
+                        <a href="#"><img src="~/Content/8/e.jpg" alt="news image" class="img-fluid mt-4"></a>
+                        <a href="#"><img src="~/Content/8/f.jpg" alt="news image" class="img-fluid mt-4"></a>
+                    </div>
+                    <div class="col-md-4 gal-img">
+                        <a href="#"><img src="~/Content/8/j.jpg" alt="news image" class="img-fluid"></a>
+                        <a href="#"><img src="~/Content/8/z.jpg" alt="news image" class="img-fluid mt-4"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- popup-->
+    <div id="gal1" class="popup-effect animate">
+        <div class="popup">
+            <img src="~/Content/Layout/images/g1.jpg" alt="Popup Image" class="img-fluid" />
+            <p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat dolor.</p>
+            <a class="close" href="#gallery">&times;</a>
+        </div>
+    </div>
+    <!-- //popup -->
+    <!-- popup-->
+    <div id="gal2" class="popup-effect animate">
+        <div class="popup">
+            <img src="~/Content/Layout/images/g2.jpg" alt="Popup Image" class="img-fluid" />
+            <p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat dolor.</p>
+            <a class="close" href="#gallery">&times;</a>
+        </div>
+    </div>
+    <!-- //popup -->
+    <!-- popup-->
+    <div id="gal3" class="popup-effect animate">
+        <div class="popup">
+            <img src="~/Content/Layout/images/g3.jpg" alt="Popup Image" class="img-fluid" />
+            <p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat dolor.</p>
+            <a class="close" href="#gallery">&times;</a>
+        </div>
+    </div>
+    <!-- //popup3 -->
+    <!-- popup-->
+    <div id="gal4" class="popup-effect animate">
+        <div class="popup">
+            <img src="~/Content/Layout/images/g4.jpg" alt="Popup Image" class="img-fluid" />
+            <p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat dolor.</p>
+            <a class="close" href="#gallery">&times;</a>
+        </div>
+    </div>
+    <!-- //popup -->
+    <!-- popup-->
+    <div id="gal5" class="popup-effect animate">
+        <div class="popup">
+            <img src="~/Content/Layout/images/g5.jpg" alt="Popup Image" class="img-fluid" />
+            <p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat dolor.</p>
+            <a class="close" href="#gallery">&times;</a>
+        </div>
+    </div>
+    <!-- //popup -->
+    <!-- popup-->
+    <div id="gal7" class="popup-effect animate">
+        <div class="popup">
+            <img src="~/Content/Layout/images/g77.jpg" alt="Popup Image" class="img-fluid" />
+            <p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat dolor.</p>
+            <a class="close" href="#gallery">&times;</a>
+        </div>
+    </div>
+    <!-- //popup -->
+    <!-- popup-->
+    <div id="gal8" class="popup-effect animate">
+        <div class="popup">
+            <img src="~/Content/Layout/images/g8.jpg" alt="Popup Image" class="img-fluid" />
+            <p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat dolor.</p>
+            <a class="close" href="#gallery">&times;</a>
+        </div>
+    </div>
+    <!-- //popup -->
+    <!-- popup-->
+    <div id="gal9" class="popup-effect animate">
+        <div class="popup">
+            <img src="~/Content/Layout/images/g9.jpg" alt="Popup Image" class="img-fluid" />
+            <p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat dolor.</p>
+            <a class="close" href="#gallery">&times;</a>
+        </div>
+    </div>
+
+
+
+    <!-- Liên Hệ -->
+    <div class="address py-5" id="contact" style="background-color:#f6f6f6;">
+        <div class="container py-xl-5 py-lg-3">
+            <h3 class="title text-center text-bl mb-5" style="color:dodgerblue; font-family:Arial;">
+                HỖ TRỢ TƯ VẤN VÀ CHIA SẼ KIẾN THỨC
+
+            </h3>
+            <div class="row address-row pt-xl-5 pt-lg-4">
+                <div class="col-lg-6">
+                    <div class="address-right p-sm-5 p-4">
+                        <div class="address-info wow fadeInRight animated" data-wow-delay=".5s">
+                            <h4 class="mb-3">Địa chỉ</h4>
+                            <p>
+                                Ấp Bến Giảng, Xã Phú An, Huyện Bến Cát, Tỉnh Bình Dương
+
+                            </p>
+                        </div>
+                        <div class="address-info address-mdl wow fadeInRight animated my-sm-5 my-4" data-wow-delay=".7s">
+                            <h4 class="mb-3">Phone </h4>
+                            <p>+0367278221</p>
+
+                        </div>
+                        <div class="address-info agileits-info wow fadeInRight animated" data-wow-delay=".6s">
+                            <h4 class="mb-3">Mail</h4>
+                            <p>
+                                <a href="#"> hoangtu2719@gmail.com</a>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 address-left wow agile fadeInLeft animated mt-lg-0 mt-5" data-wow-delay=".5s">
+
+                    <img src="~/Content/Imguser/LienHe.png" height="600" width="700" />
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Liên Hệ -->
+    <!-- Chân Trang -->
+
+    <div style="background-color:black">
+        <div class="container py-xl-5 py-lg-3">
+
+            <div class="row footer-grids py-4">
+
+                <div class="col-lg-4 footer-grid text-left ">
+                    <div class="footer-logo">
+                        <h2 class="mb-3">
+                            <a class="logo text-wh" href="index.html">FITNESS</a>
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-6 footer-grid footer-contact " style="float:right; margin-left:500px;">
+                    <h3 class="mb-sm-4 mb-3 pb-3">Liên lạc với chúng tôi</h3>
+                    <ul class="list-unstyled">
+                        <li>
+                            +0367278221
+                        </li>
+                        <li class="mt-2">
+                            <a href="#">hoangtu2719@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- copyright -->
+    <div class="copy_right">
+        <p class="text-center text-wh py-sm-3 py-3">
+            Design by Lưu Hoàng Tú
+
+        </p>
+    </div>
+    <!-- //copyright -->
+    <!-- Chân Trang -->
+    <!-- move top icon -->
+    <a href="#home" class="move-top text-center"></a>
+    <!-- //move top icon -->
+
+</body>
+
+</html>

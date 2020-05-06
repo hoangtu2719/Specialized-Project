@@ -1,0 +1,42 @@
+﻿@using Gymer.Models;
+@model List<NguoiDung>
+@{
+    ViewBag.Title = "DangNhap";
+    Layout = "~/Views/Layout/DangNhap.cshtml";
+}
+@{
+    NguoiDung ses = (NguoiDung)Session["NguoiDung"];
+}
+@if (ses != null)
+{
+    Response.Redirect("/HienThi/Index");
+}
+else
+{
+    <h4 class="form-head">Đăng nhập ngay</h4>
+   
+   
+    using (Html.BeginForm("DangNhap", "NguoiDung", FormMethod.Post))
+    {
+        @ViewBag.ThongBao
+        <div class="">
+            <p class="text-head">Tên Người Dùng</p>
+            <input type="text" name="txtusername" class="input" placeholder="" required="" />
+        </div>
+        <div class="">
+            <p class="text-head">Mật Khẩu</p>
+            <input type="password" name="txtpassword" class="input" placeholder="" required="" />
+        </div>
+        <label class="remember">
+            <input type="checkbox">
+            <span class="checkmark"></span>Ghi Nhớ Tài Khoản
+        </label>
+        <button type="submit" class="signinbutton btn">Đăng Nhập</button>
+        <p class="signup">
+            Nếu Bạn Chưa Có Tài Khoản<a href="/NguoiDung/DangKy" class="signuplink">Đăng Ký</a>
+        </p>
+    }
+}
+
+
+

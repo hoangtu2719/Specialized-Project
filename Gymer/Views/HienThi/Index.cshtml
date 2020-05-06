@@ -1,0 +1,92 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layout/Layout.cshtml";
+}
+
+
+
+<div class="banner_w3lspvt">
+    <div class="csslider infinity" id="slider1">
+        <input type="radio" name="slides" checked="checked" id="slides_1" />
+        <input type="radio" name="slides" id="slides_2" />
+        <input type="radio" name="slides" id="slides_3" />
+        <ul class="banner_slide_bg">
+            <li class="banner-top1">
+                <div class="container">
+                    <div class="banner-text">
+                        <h3 class="text-wh text-uppercase mb-md-4 mb-3"> <span>Nghị lực Và Bền bỉ</span> <br>Sẽ giúp bạn chiến thắng mọi thử thách<br /></h3>
+                        <a href="#about" class="button-style btn mt-sm-5 mt-4">Bắt đầu với chúng tôi</a>
+                    </div>
+                </div>
+            </li>
+            <li class="banner-top2">
+
+
+                <div class="container">
+                    <div class="banner-text text-center">
+                        <h3>Hãy Tìm lấy phiên bản chiến binh của mình</h3>
+                        <a href="#about" class="button-style btn mt-sm-5 mt-4">Bắt đầu với chúng tôi</a>
+                    </div>
+                </div>
+            </li>
+            <li class="banner-top3">
+                <div class="container">
+                    <div class="banner-text text-right">
+                        <h3> Không khó khăn không thành công</h3>
+                        <a href="#about" class="button-style btn mt-sm-5 mt-4" style="background-color:red">Bắt đầu với chúng tôi</a>
+                    </div>
+                </div>
+            </li>
+
+
+        </ul>
+        <div class="navigation">
+            <div>
+                <label for="slides_1"></label>
+                <label for="slides_2"></label>
+                <label for="slides_3"></label>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //banner -->
+<!-- about -->
+<div class="about py-5" id="about">
+    <div class="container py-xl-5 py-lg-3">
+        <h3 class="title text-center text-bl mb-5">
+            Chào mừng bạn đến thế giới của chúng tôi
+        </h3>
+        <div class="row about-bottom-w3l text-center pt-xl-5 pt-lg-4">
+            <div class="col-sm-6 about-grid">
+                <div class="about-grid-main">
+                    <img src="~/Content/Banner/ktcb.jpg" alt="" class="img-fluid">
+
+                    <h4 class="mt-4 mb-3">Kiến Thức Căn Bản</h4>
+                    <p> Dành cho những Gymer mới bắt đầu </p>
+                    <a href="/LichTapGym/Index" class="button-w3ls btn mt-4">Bấm Vào Đây</a>
+                </div>
+            </div>
+            <div class="col-sm-6 about-grid mt-sm-0 mt-4">
+                <div class="about-grid-main">
+                    <img src="~/Content/Banner/ktnc.jpg" alt="" class="img-fluid">
+
+                    <h4 class="mt-4 mb-3">Kiến Thức nâng cao</h4>
+                    <p>Dành cho những Gymer chuyên nghiẹp</p>
+                    <a href="/LichTapGym/Index" class="button-w3ls btn mt-4">Bấm Vào Đây</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //about -->
+<!-- stats -->
+<div style="margin-top:-30px">
+    @Html.Action("TinTuc", "HienThi")
+</div>
+<!-- //stats -->
+<!-- features -->
+<!-- //features -->
+<!-- discount -->
+<!-- //discount -->
+<!-- gallery -->

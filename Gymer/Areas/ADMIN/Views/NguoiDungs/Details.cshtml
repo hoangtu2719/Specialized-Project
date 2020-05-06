@@ -1,0 +1,76 @@
+﻿@model Gymer.Models.NguoiDung
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/ADMIN/Views/Layout/Layout.cshtml";
+}
+
+
+
+<div>
+    <b class="container-fluid btn btn-danger" style="font-size:30px">Xem thông tin Người dùng</b>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <b>Tên người dùng</b>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenNguoiDung)
+        </dd>
+
+        <dt>
+            <b>Mật khẩu</b>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MatKhau)
+        </dd>
+
+        <dt>
+           <b>Nhập lại mật khẩu</b>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhapLaiMatKhau)
+        </dd>
+
+        <dt>
+          <b>Gmail</b>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gmail)
+        </dd>
+
+
+
+        <dt>
+            <b>Ngày sinh</b>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgaySinh)
+        </dd>
+
+        <dt>
+            <b>Điện thoại</b>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DienThoaiND)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <div class="btn btn-outline-dark">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.MaNguoiDung })
+    </div>
+   
+    <br />
+    <div class="btn btn-outline-dark">
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+   
+</p>

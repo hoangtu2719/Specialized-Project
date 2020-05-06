@@ -1,0 +1,76 @@
+﻿@model Gymer.Models.NguoiDung
+
+@{
+    ViewBag.Title = "DangKy";
+    Layout = "~/Views/Layout/DangNhap.cshtml";
+}
+
+<b class="btn btn-danger" style="font-size:30px; margin-left:120px;" >Đăng kí</b>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        &nbsp;&nbsp;&nbsp;<b style="font-family:Arial;font-size:20px;">Tài khoản</b>
+        <div class="col-md-10" style="width: 98%">
+            @Html.EditorFor(model => model.TenNguoiDung, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.TenNguoiDung, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        &nbsp;&nbsp;&nbsp;<b style="font-family:Arial;font-size:20px;">Mật khẩu</b>
+        <div class="col-md-10" style="width: 98%">
+            <input type="password" name="MatKhau" class="form-control" placeholder="" required />
+            @Html.ValidationMessageFor(model => model.MatKhau, "", new { @class = "text-danger" })
+        </div>
+    </div>
+   
+    <div class="form-group">
+        &nbsp;&nbsp;&nbsp;<b style="font-family:Arial;font-size:20px;">Nhập Lại Mật khẩu</b>
+        <div class="col-md-10" style="width: 98%">
+            <input type="password" name="MatKhau1" class="form-control" placeholder="" required />
+            @Html.ValidationMessageFor(model => model.NhapLaiMatKhau, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        &nbsp;&nbsp;&nbsp;<b style="font-family:Arial;font-size:20px;">Nhập Gmail</b>
+        <div class="col-md-10" style="width: 98%">
+            <input type="email" name="Gmail" class="form-control" placeholder="Email.." required />
+            @Html.ValidationMessageFor(model => model.Gmail, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        &nbsp;&nbsp;&nbsp;<b style="font-family:Arial;font-size:20px;">Ngày Sinh</b>
+        <div class="col-md-10" style="width: 98%">
+            <input type="date" name="NgaySinh" class="form-control" required />
+            @Html.ValidationMessageFor(model => model.NgaySinh, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+  
+
+    <div class="form-group">
+        &nbsp;&nbsp;&nbsp;<b style="font-family:Arial;font-size:20px;">Số Điện Thoại</b>
+        <div class="col-md-10" style="width: 98%">
+            <input type="number" name="DienThoaiND" class="form-control" required />
+            @Html.ValidationMessageFor(model => model.DienThoaiND, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Tạo Tài Khoản" class="btn btn-danger" style="width: 100%; margin-left: -12%" />
+        </div>
+    </div>
+</div>
+}
+

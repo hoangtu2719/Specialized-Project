@@ -1,0 +1,68 @@
+﻿@using Gymer.Models;
+@model List<BaiVietKT>
+
+@{
+    ViewBag.Title = "BaiTap";
+    Layout = "~/Views/Layout/Layout.cshtml";
+}
+
+
+<div class="banner_w3lspvt">
+    <div class="csslider infinity" id="slider1">
+
+        <div class="banner_slide_bg">
+
+            <img src="~/Content/Img/BannerBT.jpg" height="400" ; width="1350" />
+            <div class="container">
+                <div class="banner-text">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<div class="container-fluid">
+    <div class="list-group" style="width: 75%; float: left; margin-top:-15%">
+        <form action="@Url.Action("TimKiemKT", "TiemkiemKT")" method="post">
+            <input type="search" name="Key" class="form-control col-5" placeholder="Nhập từ khóa" style="float: left" />
+            <button class="btn btn-success" style="float: left; margin-left: 1%"><i class="fa fa-search"></i></button>
+            <br />
+        </form>
+        @foreach (var item in Model)
+        {
+            <div class="list-group-item list-group-item-action">
+                <div style="width:40%;float:left">
+                    <img src="@Url.Content("~/Content/ImgBVKT/" +item.AnhChuDe)" style="width: 360px; height: 200px; float: left; box-shadow: 0.1px 0.1px 0.1px 0.1px;" />
+                </div>
+                <div style="width:60%; float:right ">
+                    <b style="font-family:Arial; font-size:30px; color:cornflowerblue">@item.TieuDe</b>
+                    <p style="max-height:90px; overflow:hidden">@item.NoiDung</p>
+                    <a href="@Url.Action("ChiTietBaiVietKT","BaiVietKT", new {@machitietkt = item.MaBaiVietKT })"> <b class="btn btn-danger">XEM THÊM</b></a>
+                </div>
+            </div>
+        }
+    </div>
+
+
+
+    <div class="list-group" style="width: 19%; float: right; margin-top:-14%;">
+        <br />
+        <b class="btn btn-dark">Có thể bạn thích</b>
+
+        @Html.Action("BaiVietMoiNhat", "HienThi")
+
+    </div>
+</div>
+<br />
+<br />
+
+<div class="clearfix"></div>
+
+
+
+
+

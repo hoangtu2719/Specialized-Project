@@ -1,0 +1,75 @@
+﻿@model Gymer.Models.BaiVietKT
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/ADMIN/Views/Layout/Layout.cshtml";
+}
+
+
+
+
+<div>
+    <h4 class="btn btn-danger container-fluid" style="font-family:Arial; font-size:30px;">Xóa Bài Viết</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <b>Nội dung</b>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoiDung)
+        </dd>
+
+        <dt>
+            <b>Ảnh chủ đề</b>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnhChuDe)
+        </dd>
+
+        <dt>
+            <b>Tên chủ đề</b>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenChuDe)
+        </dd>
+
+        <dt>
+            <b>Tiêu đề</b>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TieuDe)
+        </dd>
+
+        <dt>
+            <b>Mã người dùng</b>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaNguoiDung)
+        </dd>
+
+        <dt>
+            <b>Ngày đăng</b>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayDang)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-outline-dark" style="margin-left:14px;" />
+        </div>
+        <div class="btn btn-outline-dark" style="margin-left:14px;">
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

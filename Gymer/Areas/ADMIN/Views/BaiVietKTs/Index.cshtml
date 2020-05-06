@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Gymer.Models.BaiVietKT>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/ADMIN/Views/Layout/Layout.cshtml";
+}
+
+
+
+<a href="/ADMIN/BaiVietKTs/Create" class="btn btn-danger" style="width: 30%; height: 35px"><b style="color: white">THÊM BÀI VIẾT</b></a>
+<table class="table  table-bordered table-striped ">
+
+        <tr>
+            <th>
+               <b>Nội dung</b>
+            </th>
+            <th>
+                <b>Ảnh chủ đề</b>
+            </th>
+            <th>
+                <b>Ngày Đăng</b>
+            </th>
+            <th>
+               <b>Tiêu đề</b>
+            </th>
+            <th>
+                <b>Mã người dùng</b>
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NoiDung)
+                </td>
+                <td>
+                    <img src="~/Content/ImgBVKT/@item.AnhChuDe" style="width: 100px; height: 100px" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayDang)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TieuDe)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaNguoiDung)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.MaBaiVietKT }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.MaBaiVietKT }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.MaBaiVietKT })
+                </td>
+            </tr>
+        }
+
+    </table>
+

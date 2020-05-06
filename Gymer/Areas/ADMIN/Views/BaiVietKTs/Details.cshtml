@@ -1,0 +1,70 @@
+﻿@model Gymer.Models.BaiVietKT
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/ADMIN/Views/Layout/Layout.cshtml";
+}
+
+
+
+<div>
+    <h4 class="btn btn-dark container-fluid" style="font-family:Arial;">Xem Chi Tiết Bài Viết</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+           <b>Nội Dung</b>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoiDung)
+        </dd>
+
+        <dt>
+            <b>Ảnh chủ đề</b>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnhChuDe)
+        </dd>
+
+        <dt>
+            <b>Tên chủ để</b>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenChuDe)
+        </dd>
+
+        <dt>
+            <b>Tiêu đề</b>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TieuDe)
+        </dd>
+
+        <dt>
+            <b>Mã người dùng</b>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaNguoiDung)
+        </dd>
+        <dd>
+            <b>Ngày đăng</b>
+        </dd>
+        <dd>
+            @Html.DisplayFor(Model=>Model.NgayDang)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <div class="btn btn-outline-dark">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.MaBaiVietKT })
+    </div>
+    <br />
+    <div class="btn btn-outline-dark">
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</p>

@@ -1,0 +1,56 @@
+﻿@using Gymer.Models;
+@model  DinhDuong
+@{
+    ViewBag.Title = "ChiTietDD";
+    Layout = "~/Views/Layout/Layout.cshtml";
+}
+
+<div class="banner_w3lspvt">
+    <div class="csslider infinity" id="slider1">
+
+        <div class="banner_slide_bg">
+
+            <img src="~/Content/ImgDD/BannerDD2.jpg" height="500px" ; width="1350px" />
+            <div class="container">
+                <div class="banner-text">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="container-fluid" style="margin-top:10%">
+    <div>
+        <div class="list-group" style="width: 77%; float: left; margin-top:-28%;">
+            <div style="margin-left:4%;">
+
+                <b style="font-size: 20px;"><i class="fa fa-eye">&nbsp;</i>@Model.LuotXem</b><br />
+                <b style="font-family:Arial; font-size: 30px; ">@Model.TenThucPham</b>
+                <p>@Model.TieuDe</p>
+                <br />
+                <img src="~/Content/ImgDD/@Model.AnhThucPham" style="height:440px;width:620px" />
+                <br />
+
+            </div>
+        </div>
+
+        <div class="list-group" style="width: 23%; float: right; margin-top:-28%;">
+            <b class="btn btn-dark">Có thể bạn thích</b>
+            @Html.Action("BaiVietDDMoiNhat", "HienThi")
+
+        </div>
+
+
+        <!--Chi se lien ket-->
+        <div class="socials-share">
+            <a class="bg-facebook" href="http://www.facebook.com/share.php?u=http://tus.somee.com/ChiTietBaiVietDD/ChiTietDD?madinhduong=@Model.Ma_DinhDuong" target="_blank"><span class="fa fa-facebook"></span> Share</a>
+            <a class="bg-twitter" href="https://twitter.com/intent/tweet?url=https://localhost:44380/ChiTietBaiVietDD/ChiTietDD?madinhduong=@Model.Ma_DinhDuong" target="_blank"><span class="fa fa-twitter"></span> Tweet</a>
+            <a class="bg-pinterest" href="https://www.pinterest.com/pin/create/button/?url=http://tus.somee.com/HienThi/Index&media=/Content/ImgDD/@Model.AnhThucPham&description=@Model.NoiDung" target="_blank"><span class="fa fa-pinterest"></span> Pin</a>
+
+        </div>
+        <!--Chia se lien ket-->
+    </div>
+</div>
+<div class="clearfix"></div>
+

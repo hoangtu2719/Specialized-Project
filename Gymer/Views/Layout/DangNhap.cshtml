@@ -1,0 +1,48 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="zxx">
+
+<head>
+    <title>Đăng Nhập</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords"
+          content="Master Signin Form Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <!-- //Meta tag Keywords -->
+    <link href="~/Content/DangNhap/css/font-awesome.css" rel="stylesheet" />
+    <link href="~/Content/DangNhap/css/style.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <section class="signin-form">
+        <div class="overlay">
+            <div class="wrapper">
+                <div class="logo text-center top-bottom-gap">
+                    <a class="brand-logo" href="/HienThi/Index">FITNESS</a>
+
+                </div>
+                <div class="form34">
+                    @RenderBody()
+                </div>
+            </div>
+            <!-- copyright -->
+            <div class="copyright text-center">
+                <p> Bản Quyền Thuộc Về FITNESS</p>
+            </div>
+
+        </div>
+        <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+        <script src="~/Scripts/jquery.validate.min.js"></script>
+        <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+        <script src="~/Scripts/bootstrap.min.js"></script>
+
+    </section>
+</body>
+
+</html>

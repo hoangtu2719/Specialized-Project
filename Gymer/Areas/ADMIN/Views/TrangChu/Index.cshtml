@@ -1,0 +1,113 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/ADMIN/Views/Layout/Layout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Stats -->
+        <div class="outer-w3-agile col-xl">
+
+            <div class="stat-grid p-3 d-flex align-items-center justify-content-between bg-primary">
+                <div class="s-l">
+                    <h5>Quản Lí Dữ Liệu Bài Viết</h5>
+                    <p class="paragraph-agileits-w3layouts text-white"></p>
+                </div>
+                <div class="s-r" style="width:20%; float:left">
+
+                    <div style="width:90%;float:left">
+                        <a href="/ADMIN/BaiViets/Create">
+                            <b class="btn btn-danger" style="width:130px; height:35px;">Thêm Bài Viết</b>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/ADMIN/BaiViets/Index">
+                            <i>
+                                <b class="far fa-edit"></b>
+                            </i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="stat-grid p-3 mt-3 d-flex align-items-center justify-content-between bg-success">
+                <div class="s-l">
+                    <h5>Quản Lý Bài Viết Dinh Dưỡng</h5>
+                    <p class="paragraph-agileits-w3layouts"></p>
+                </div>
+                <div class="s-r" style="width:20%; float:left">
+                    <div style="width:90%;float:left">
+                        <a href="/ADMIN/DinhDuongs/Create">
+                            <b class="btn btn-danger" style="width:130px; height:35px;">Thêm Bài Viết</b>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/ADMIN/DinhDuongs/Index">
+                            <i>
+                                <b class="far fa-edit"></b>
+                            </i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            @if (Session["ADMIN"] != null)
+            {
+                <div class="stat-grid p-3 mt-3 d-flex align-items-center justify-content-between bg-danger">
+                    <div class="s-l">
+                        <h5>Quản Lý Bài Tài Khoản Nguời Dùng</h5>
+                        <p class="paragraph-agileits-w3layouts"></p>
+                    </div>
+                    <div class="s-r" style="width:20%; float:left">
+                        <div style="width:90%;float:left">
+                            <a href="/ADMIN/NguoiDungs/Create">
+                                <b class="btn btn-danger" style="width:130px; height:35px;">Thêm Tài Khoản</b>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/ADMIN/NguoiDungs/Index">
+                                <i>
+                                    <b class="far fa-edit"></b>
+                                </i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            }
+
+            <div class="stat-grid p-3 mt-3 d-flex align-items-center justify-content-between bg-dark">
+                <div class="s-l">
+                    <h5>Quản Lý Bài Viết Chia Sẽ Kiến Thức</h5>
+                    <p class="paragraph-agileits-w3layouts"></p>
+                </div>
+                <div class="s-r" style="width:20%; float:left">
+                    <div style="width:90%;float:left">
+                        <a href="/ADMIN/BaiVietKTs/Create">
+                            <b class="btn btn-danger" style="width:130px; height:35px;">Thêm Bài Viết</b>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/ADMIN/BaiVietKTs/Index">
+                            <i>
+                                <b class="far fa-edit"></b>
+                            </i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--// Stats -->
+        <!-- Pie-chart -->
+        <!--// Pie-chart -->
+    </div>
+</div>
+
+

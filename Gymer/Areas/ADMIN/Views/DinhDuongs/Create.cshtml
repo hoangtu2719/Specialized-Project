@@ -1,0 +1,59 @@
+﻿@model Gymer.Models.DinhDuong
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/ADMIN/Views/Layout/Layout.cshtml";
+}
+
+
+
+@using (Html.BeginForm("Create", "DinhDuongs", FormMethod.Post, new { @enctype = "multipart/form-data" })) 
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal ">
+    <b class="btn btn-danger" style="font-size : 30px ;">Bài Viết Dinh Dưỡng Mới</b>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+<div class="form-group">
+    &nbsp; &nbsp;<b>Tiêu Đề</b>
+    <div class="col-md-10">
+        @Html.EditorFor(model => model.TieuDe, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.TieuDe, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group">
+    &nbsp; &nbsp;<b>Ảnh thực phẩm</b>
+    <div class="col-md-10">
+       <input type="file" name="fileUpload" required class="btn btn-danger"/>
+    </div>
+</div>
+
+<div class="form-group">
+    &nbsp; &nbsp;<b>Tên thực phẩm</b>
+    <div class="col-md-10">
+        @Html.EditorFor(model => model.TenThucPham, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.TenThucPham, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group">
+    &nbsp; &nbsp;<b>Nội dung</b>
+    <div class="col-md-10">
+        @Html.EditorFor(model => model.NoiDung, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.NoiDung, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Tạo bài Viết" class="btn btn-outline-dark" />
+        </div>
+    </div>
+</div>
+}
+
+<div class="btn btn-outline-dark" style="margin-left:14px">
+    @Html.ActionLink("Back to List", "Index")
+</div>

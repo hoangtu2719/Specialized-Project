@@ -1,0 +1,83 @@
+﻿@model IEnumerable<Gymer.Models.NguoiDung>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/ADMIN/Views/Layout/Layout.cshtml";
+}
+
+<a href="/ADMIN/NguoiDungs/Create" class="btn btn-danger" style="width: 30%; height: 35px"><b style="color: white">THÊM BÀI VIẾT</b></a>
+<table class="table  table-bordered table-striped ">
+
+    <tr>
+        <th>
+            <b>Tên người dùng</b>
+        </th>
+        <th>
+            <b>Mật khẩu</b>
+        </th>
+        <th>
+            <b>Gmail</b>
+        </th>
+        <th>
+            <b>Ngày sinh</b>
+        </th>
+        <th>
+            <b>Điện Thoại</b>
+        </th>
+        <th>
+            <b>Địa chỉ</b>
+        </th>
+        <th>
+            <b>Công cụ</b>
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenNguoiDung)
+            </td>
+            <td>
+                <input type="password" value="@item.MatKhau" id="password" disabled/>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgaySinh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DienThoaiND)
+            </td>
+            <td>
+                @Html.DisplayFor(ModelItem => item.DiaChi)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.MaNguoiDung }) |
+                @Html.ActionLink("Details", "Details", new { id = item.MaNguoiDung }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.MaNguoiDung })
+            </td>
+        </tr>
+    }
+
+</table>
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+$(document).ready(function(){
+    $('input[type="password"]').after(' <input type="checkbox" class="check" /> Hiển thị mật khẩu');
+    $('.check').change(function(){
+        var prev = $(this).prev();
+        var value = prev.val();
+        var type = prev.attr('type');
+        var name = prev.attr('name');
+        var id = prev.attr('id');
+        var klass = prev.attr('class');
+        var new_type = (type == 'password') ? 'text' : 'password';
+        prev.remove();
+        $(this).before('<input type="'+new_type+'" value="' +value+ '" name="' +name+ '" value="' +value+ '"id="' +id+ '" class="' +klass+ '" />');
+
+    });
+})
+</script>

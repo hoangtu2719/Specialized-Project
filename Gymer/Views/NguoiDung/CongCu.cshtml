@@ -1,0 +1,40 @@
+﻿@using Gymer.Models;
+@model List<NguoiDung>
+@{
+    NguoiDung ses = (NguoiDung)Session["NguoiDung"];
+
+}
+@if (ses != null)
+{
+    
+        <label for="drop-2" class="toggle">
+            Dropdown <span class="fa fa-angle-down" aria-hidden="true"></span>
+        </label>
+        <a href="#">Chào:@ses.TenNguoiDung<span class="fa fa-angle-down" aria-hidden="true"></span></a>
+        <ul>
+            <li><a href="#" class="drop-text"><i class="fa fa-sign-in">&nbsp;</i>Xem Thông Tin</a></li>
+            <li><a href="/DangXuat/DangXuat" class="drop-text"><i class="fa fa-user">&nbsp;</i>Đăng Xuất</a></li>
+        </ul>
+}
+else
+{
+
+    <!-- First Tier Drop Down -->
+    <label for="drop-2" class="toggle">
+        Dropdown <span class="fa fa-angle-down" aria-hidden="true"></span>
+    </label>
+    <a href="#">Đăng Nhập <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+    <input type="checkbox" id="drop-2" />
+
+    <ul>
+        <li><a href="/NguoiDung/DangNhap" class="drop-text"><i class="fa fa-sign-in">&nbsp;</i>Đăng nhập</a></li>
+        <li><a href="/NguoiDung/DangKy" class="drop-text"><i class="fa fa-user">&nbsp;</i>Đăng ký</a></li>
+    </ul>
+
+
+
+}
+
+
+
+

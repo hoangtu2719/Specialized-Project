@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Gymer.Models.DinhDuong>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/ADMIN/Views/Layout/Layout.cshtml";
+}
+
+
+<a href="/ADMIN/DinhDuongs/Create" class="btn btn-danger" style="width: 30%; height: 35px"><b style="color: white">THÊM BÀI VIẾT</b></a>
+<table class="table  table-bordered table-striped ">
+
+    
+        <tr>
+            <th>
+                Tiêu đề
+            </th>
+            <th>
+                Tên thực phẩm
+            </th>
+            <th>
+                Nội dung
+            </th>
+            <th>
+                Ảnh thực phẩm
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TieuDe)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenThucPham)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NoiDung)
+                </td>
+                <td>
+                    <img src="~/Content/ImgDD/@item.AnhThucPham" style="width: 100px; height: 100px"/>
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Ma_DinhDuong }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Ma_DinhDuong }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Ma_DinhDuong })
+                </td>
+            </tr>
+        }
+
+</table>

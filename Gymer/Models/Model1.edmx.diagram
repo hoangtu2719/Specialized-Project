@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c303f7ae61504dba9005afd57828d4de" Name="Diagram1">
+        <EntityTypeShape EntityType="GymModel.ADMIN" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GymModel.BaiViet" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GymModel.BaiVietKT" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GymModel.Binhluan" Width="1.5" PointX="5.25" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GymModel.DanhMuc" Width="1.5" PointX="0.75" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GymModel.DinhDuong" Width="1.5" PointX="0.75" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GymModel.KT" Width="1.5" PointX="0.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GymModel.NguoiDung" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GymModel.PhanLoai" Width="1.5" PointX="0.75" PointY="23.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GymModel.sysdiagram" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GymModel.TinTuc" Width="1.5" PointX="0.75" PointY="25.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GymModel.TraLoi" Width="1.5" PointX="7.5" PointY="2.875" IsExpanded="true" />
+        <AssociationConnector Association="GymModel.FK_BaiViet_ADMIN" ManuallyRouted="false" />
+        <AssociationConnector Association="GymModel.FK_BaiViet_BaiVietKT" ManuallyRouted="false" />
+        <AssociationConnector Association="GymModel.FK_BaiViet_DanhMuc" ManuallyRouted="false" />
+        <AssociationConnector Association="GymModel.FK_BaiViet_DinhDuong" ManuallyRouted="false" />
+        <AssociationConnector Association="GymModel.FK_BaiViet_KT" ManuallyRouted="false" />
+        <AssociationConnector Association="GymModel.FK_BaiViet_NguoiDung" ManuallyRouted="false" />
+        <AssociationConnector Association="GymModel.FK_BaiViet_PhanLoai" ManuallyRouted="false" />
+        <AssociationConnector Association="GymModel.FK_BaiViet_TinTuc" ManuallyRouted="false" />
+        <AssociationConnector Association="GymModel.FK_Binhluan_BaiViet" ManuallyRouted="false" />
+        <AssociationConnector Association="GymModel.FK_Binhluan_NguoiDung" ManuallyRouted="false" />
+        <AssociationConnector Association="GymModel.FK_TraLoi_Binhluan" ManuallyRouted="false" />
+        <AssociationConnector Association="GymModel.FK_TraLoi_NguoiDung" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

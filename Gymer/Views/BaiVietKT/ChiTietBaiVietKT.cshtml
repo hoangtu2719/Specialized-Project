@@ -1,0 +1,57 @@
+﻿@using Gymer.Models;
+@model BaiVietKT
+@{
+    ViewBag.Title = "ChiTietBaiVietKT";
+    Layout = "~/Views/Layout/Layout.cshtml";
+}
+
+
+<div class="banner_w3lspvt">
+    <div class="csslider infinity" id="slider1">
+
+        <div class="banner_slide_bg">
+
+            <img src="~/Content/Banner/Banner6.jpg" height="500px" ; width="1350px" />
+            <div class="container">
+                <div class="banner-text">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<div>
+    <div class="list-group" style="width: 75%; float: left; margin-top:-18%;">
+        <div style="margin-left:4%;">
+            <b style="font-family:Arial; font-size: 30px; color:cornflowerblue ">@Model.TieuDe </b>
+            <br />
+            <br />
+            <img src="~/Content/ImgBVKT/@Model.AnhChuDe" style="height:440px;width:620px" />
+            <br />
+            <p>@Model.NoiDung</p>
+        </div>
+
+        <!--Chi se lien ket-->
+        <div class="socials-share">
+            <a class="bg-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://tus.somee.com/BaiVietKT/ChiTietBaiVietKT?machitietkt=@Model.MaBaiVietKT" target="_blank"><span class="fa fa-facebook"></span> Share</a>
+            <a class="bg-twitter" href="http://twitter.com/intent/tweet?text=@Model.TieuDe&url=https://tus.somee.com/HienThi/Index" target="_blank"><span class="fa fa-twitter"></span> Tweet</a>
+            <a class="bg-pinterest" href="https://www.pinterest.com/pin/create/button/?url=https://tus.somee.com/HienThi/Index&media=/Content/ImgBVKT/@Model.AnhChuDe&description=@Model.NoiDung" target="_blank"><span class="fa fa-pinterest"></span> Pin</a>
+       
+        </div>
+        <!--Chia se lien ket-->
+
+    </div>
+
+    <div class="list-group" style="width: 20%; float: right; margin-top:-18%">
+        @Html.Action("BaiVietKTMoiNhat","BaiVietKT")
+    </div>
+</div>
+
+<div class="clearfix"></div>
+
+@Html.Action("Index", "BinhLuan", new { @id = Model.MaBaiVietKT})

@@ -1,0 +1,277 @@
+﻿@using Gymer.Models;
+@model List<BaiViet>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layout/Layout.cshtml";
+}
+
+    <div style="background-color:#f6f6f6;">
+        <div>
+            <div class="banner_w3lspvt">
+                <div class="csslider infinity" id="slider1">
+
+                    <div class="banner_slide_bg">
+
+                        <img src="~/Content/ImgLT/cn.png" height="500px" ; width="1350px" />
+                        <div class="container">
+                            <div class="banner-text">
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div style="float:left; width:70%; margin-left:50px; ">
+                <div style="margin-top:-18%; font-family:Arial;">
+                    <h1 style="color:cadetblue"><b>Fitness sẽ cung cấp cho các bạn một lịch tập gym hợp lí, hiệu quả được xây dựng từ những kiến thức thể hình.</b></h1>
+                    <br />
+                    <p>Lịch tập gym của Fitness sẽ giúp bạn sắp xếp được lịch trình phù hợp với mục tiêu của mình, từ đó có được kết quả tập luyện nhanh chóng và hiệu quả cao hơn.</p>
+                    <img src="~/Content/ImgLT/BannerLT1.jpg" width="900PX" height="500px" />
+                    <h4 style="color:cornflowerblue"><b>6 nguyên tắc cơ bản trong việc xây dựng lịch tập gym</b></h4>
+                    <br />
+                    <b>Để các bạn có thể áp dụng lịch tập gym cho mình một cách chính xác nhất, Fitness đã xây dựng 6 nguyên tắc cơ bản khi thực hiện việc tập gym cho các bạn như sau:</b>
+                    <ul style="margin-left:30px;">
+                        <li>Thứ nhất: Không sắp xếp lịch tập 2 nhóm cơ lớn trong một buổi tập. Nhóm cơ lớn gồm: Mông – đùi, xô – lưng. Nhóm cơ nhỏ gồm: vai, tay, cẳng tay, cẳng chân.</li>
+                        <li>Thứ 2: Chỉ được tập tối đa 3 nhóm cơ cùng một buổi.</li>
+                        <li>Thứ 3: Nên sắp xếp lịch tập chung các nhóm cơ có tác dụng bổ trợ cho nhau.</li>
+                        <li>Thứ 4: Nếu anh em muốn tập để kích thích tăng cân, tăng cơ bắp thì nên tập 2 nhóm cơ và tăng khối lượng tạ khi tập.</li>
+                        <li>Thứ 5: Và ngược lại, đối với người tập để giảm mỡ thì phải tập 3 – 4 nhóm cơ, tăng bài tập cho mỗi nhóm cơ bên cạnh đó giảm khối lượng tạ để tăng lượng Reps lên.</li>
+                        <li>Thứ 6: Trong thời gian tập nên nghỉ ngơi từ 1 – 2 ngày/tuần để cơ bắp có thời gian phục hồi.</li>
+                    </ul>
+                    <br />
+                    <h4 style="color:cadetblue"><b>Một số lưu ý khi thực hiện lịch tập gym cho các bạn</b></h4>
+                    <br />
+                    <img src="~/Content/ImgLT/BannerLT.jpg" width="900px" height="500px" />
+                    <br />
+                    <br />
+                    <ul style="margin-left:30px;">
+                        <li>Trước khi bắt đầu mỗi buổi tập, bạn đừng quên khởi động thật kỹ trước khi tập nhé vì chúng sẽ giúp các bài tập trở nên hiệu quả và an toàn hơn.</li>
+                        <li>Anh em hãy cố gắng tập trung 100% tinh thần khi tập luyện, nên hạn chế nói chuyện riêng hoặc ngắt quãng khi tập gym.</li>
+                        <li>Mang nước khi tập gym, vì nước là một trong những yếu tố quan trọng giúp việc tập gym trở nên hiệu quả hơn.</li>
+                        <li>Tập theo đúng lịch tập gym, tuân theo hướng dẫn của huấn luyện viên, không nên đan xen các bài tập mới vào.</li>
+                    </ul>
+                    <h4 style="color:cornflowerblue"><b>Lịch tập gym phù hợp cho từng người</b></h4>
+                    <p>
+                        Việc xây dựng một lịch tập gym chi tiết và khoa học sẽ giúp các bạn có thể lên kế hoạch tốt nhất cho việc tập luyện của bản thân
+                        . Ngoài ra Fitness đã sắp xếp lịch tập gym cho các bạn theo nguyên tắc chia lịch theo các nhóm cơ và thời gian tập luyện
+                        của từng người. Bạn có thể tham khảo và thực hiện theo mục tiêu của mình nhé!
+                    </p>
+                    <h5 style="color:red">Lịch tập gym chuẩn cho người mới bắt đầu</h5>
+                    <p>Nếu bạn mới tham gia tập gym hoặc đã nghỉ trong một thời gian dài mới tập lại thì có thể tham khảo các lịch mẫu sau:</p>
+                    <b>Lịch tập gym 5 buổi/tuần (nghỉ 2 buổi)</b>
+                    <ul style="margin-left:30px;">
+                        <li>Thứ hai: Ngực</li>
+                        <li>Thứ ba: Bụng, lưng xô</li>
+                        <li>Thứ tư: Tay trước và tay sau </li>
+                        <li>Thứ năm: Nghỉ</li>
+                        <li>Thứ sáu: Mông đùi, chân   </li>
+                        <li>Thứ bảy: Bụng, vai</li>
+                        <li>Chủ nhật: Nghỉ</li>
+                    </ul>
+                    <h5 style="color:red">Đây là lịch tập nhẹ nhàng cho các bạn mới bắt đầu</h5>
+                    <b>+ Lịch tập gym 6 buổi/tuần (nghỉ 1 buổi)</b>
+                    <ul style="margin-left:30px;">
+                        <li>Thứ hai: Lưng xô.  </li>
+                        <li>Thứ ba: Bụng, ngực.</li>
+                        <li>Thứ tư: Chân. </li>
+                        <li> Thứ năm: Tay</li>
+                        <li>Thứ sáu: Bụng, ngực. </li>
+                        <li>Thứ bảy: Bắp chuối, vai.</li>
+                        <li>Chủ nhật: Nghỉ.</li>
+                    </ul>
+                    <p>Lịch tập gym này phát triển cơ ngực tối đa, nên thời gian tập ngực là 2 buổi Ngực/Tuần.</p>
+                    <!--Hình nên lịch tập gym-->
+                    <img src="~/Content/ImgLT/lt.png" />
+                    <!--Hình nền lịch tập gym-->
+                    <!--Banner-->
+                    <img src="~/Content/ImgLT/BannerLT2.jpg" width="900px" height="500px" />
+                    <!--Banner-->
+                    <br />
+                    <br />
+                    <h4 style="color:cornflowerblue"><b>Lịch tập gym cho nam trong thời gian dài</b></h4>
+                    <br />
+                    <p>
+                        Với những bạn đã tập trong một thời gian dài, Fitness đã xây dựng lịch tập với cường độ mạnh hơn, các bạn
+                        có thể tham khảo và chuyển qua lịch tập dưới đây:
+                    </p>
+                    <br />
+                    <h5> <b style="color:red">Lịch tập gym chuẩn nhất</b></h5>
+                    <!--Thứ 2-->
+                    <h4>Thứ 2: Ngực, Tay sau, Bụng</h4>
+                    <h5>Ngực:</h5>
+                    <ul style="margin-left:30px;">
+                        <li>1.Đẩy tạ đòn trên ghế dốc</li>
+                        <li>2.Đẩy tạ đòn trên ghế phẳng</li>
+                        <li>3.Đẩy tạ đơn trên ghế nghiêng</li>
+                        <li>4.Đẩy tạ đơn trên ghế phẳng</li>
+                        <li>5.Đẩy ngực với máy Chest Press</li>
+                        <li>6.Hít xà kép ngiêng người</li>
+                    </ul>
+                    <h5>Tay sau:</h5>
+                    <ul style="margin-left:30px;">
+                        <li>1.Đứng đẩy tạ đơn bằng tay sau</li>
+                        <li>2.Đứng đẩy tạ đòn bằng tay sau</li>
+                        <li>3. Hít xà kép thẳng người</li>
+                    </ul>
+                    <h5>Bụng:</h5>
+                    <ul style="margin-left:30px;">
+                        <li>Ngồi ghế dốc gập bụng</li>
+                    </ul>
+                    <!--Thứ 2-->
+                    <!--Thứ 3-->
+                    <h4>Thứ 3: Mông, Đùi, Cơ liên sườn</h4>
+                    <h5>Mông, Đùi</h5>
+                    <ul style="margin-left:30px;">
+                        <li>1.Gánh đùi bằng tạ đòn(Swquat)</li>
+                        <li>2.Ngồi máy đạp đùi</li>
+                        <li>3.Đá đùi trước</li>
+                        <li>4.Đứng gánh tạ đòn nhón ngón chân</li>
+                        <li>5.Chùng chân với tạ đơn</li>
+                    </ul>
+                    <h5>Cơ liên sườn</h5>
+                    <ul style="margin-left:30px;">
+                        <li>1.Ngồi cầm tạ xoay hông</li>
+                        <li>2.Nằm lăn bánh xe</li>
+                        <li>3.Gập một bên với tạ đơn</li>
+                    </ul>
+                    <!--Thứ 3-->
+                    <!--Thứ 4-->
+                    <h4>Thứ 4:Cơ lưng, Tay trước, Bụng</h4>
+                    <h5>Cơ lưng</h5>
+                    <ul style="margin-left:30px;">
+                        <li>1.Deadlift</li>
+                        <li>2.Đứng nghiêng người kéo tạ đòn</li>
+                        <li>3.Kéo cáp lưng xô</li>
+                        <li>4.Ngồi kéo cáp hẹp</li>
+                        <li>5.Đứng nghiêng người kéo cáp</li>
+                        <li>6.Nghiêng người kéo tạ đơn</li>
+                    </ul>
+                    <h5>Tay trước</h5>
+                    <ul style="margin-left:30px;">
+                        <li>1.Đứng gập tạ đơn</li>
+                        <li>2.Đứng gập tạ đòn</li>
+                        <li>3.Ngồi máy gập tạ</li>
+                        <li>4.Đặt tay lên ghế nghiêng kéo tạ đơn</li>
+                    </ul>
+                    <h5>Bụng</h5>
+                    <ul style="margin-left:30px;">
+                        <li>Đu thanh xà kéo chân</li>
+                    </ul>
+                    <!--Thứ 4-->
+                    <!--Thứ 5-->
+                    <h4>Thứ 5: Cơ vai, Cardio</h4>
+                    <h5>Cơ vai</h5>
+                    <ul style="margin-left:30px;">
+                        <li>1. Đứng đẩy vai với tạ đòn</li>
+                        <li>2.Ngồi đẩy vai với tạ đơn</li>
+                        <li>3. Đứng nâng vai bằng tạ đơn ( Phía trước)</li>
+                        <li>4. Đứng nâng vai bằng tạ đơn (Bến hông)</li>
+                        <li>5.Dùng vai nhấc tạ</li>
+                    </ul>
+                    <h5>Cardio</h5>
+                    <ul style="margin-left:30px;">
+                        <li>Chạy bộ</li>
+                    </ul>
+                    <!--Thứ 5-->
+                    <!--Thứ 6-->
+                    <h4>Thứ 6: Cơ tay, Cơ liên sườn</h4>
+                    <h5>Cơ tay</h5>
+                    <h6>Cơ tay trước</h6>
+                    <ul style="margin-left:30px;">
+                        <li>1.Đứng gập tạ đơn</li>
+                        <li>2.Đứng gập tạ đòn</li>
+                        <li>3.Ngồi máy gập tạ</li>
+                        <li>4.Đặt tay lên ghế nghiêng kéo tạ đơn</li>
+                    </ul>
+                    <h6>Cơ tay sau</h6>
+                    <ul style="margin-left:30px;">
+                        <li>1.Đứng đẩy tạ đơn bằng tay sau</li>
+                        <li>2.Đứng đẩy tạ đòn bằng tay sau</li>
+                        <li>3.Kéo cáp bằng cơ tay sau (Cắt nét)</li>
+                        <li>4.Đứng quay người lại kéo cáp</li>
+                    </ul>
+                    <h6>Bụng</h6>
+                    <ul style="margin-left:30px;">
+                        <li>1. Gập bụng co gối</li>
+                    </ul>
+                    <!--Thứ 6-->
+                    <p>Nhóm cơ nào yếu thì bạn nên tập 2 lần nhé, Nhóm cơ ngực mình nhỏ nên mình chọn tập 2 lần</p>
+                    <!--Thứ 7-->
+                    <h4>Thứ 7: Ngực, Tay sau, Bụng</h4>
+                    <h5>Ngực:</h5>
+                    <ul style="margin-left:30px;">
+                        <li>1.Đẩy tạ đòn trên ghế dốc</li>
+                        <li>2.Đẩy tạ đòn trên ghế phẳng</li>
+                        <li>3.Đẩy tạ đơn trên ghế nghiêng</li>
+                        <li>4.Đẩy tạ đơn trên ghế phẳng</li>
+                        <li>5.Đẩy ngực với máy Chest Press</li>
+                        <li>6.Hít xà kép ngiêng người</li>
+                    </ul>
+                    <h5>Tay sau:</h5>
+                    <ul style="margin-left:30px;">
+                        <li>1.Đứng đẩy tạ đơn bằng tay sau</li>
+                        <li>2.Đứng đẩy tạ đòn bằng tay sau</li>
+                        <li>3. Hít xà kép thẳng người</li>
+                    </ul>
+                    <h5>Bụng:</h5>
+                    <ul style="margin-left:30px;">
+                        <li>Ngồi ghế dốc gập bụng</li>
+                    </ul>
+                    <!--Thứ 7-->
+                    <p>
+                        Lưu ý: Với lịch tập gym này,thời gian tập là từ 60 tới 90 phút, do vậy bạn phải tập đủ 4 đến 5 bài cho một nhóm
+                        cơ chính, và khoảng 2 bài cho nhóm cơ phụ. Đối với bài superset tăng tạ từ 4 tới 5 hiệp, mỗi hiệp lặp lại khoảng 10 lần.
+                    </p>
+                    <br />
+                    <!--Lịch Cho ngươì bận rộn-->
+                    <h4 style="color:cornflowerblue">Nếu các bạn là người bận rộn, không có nhiều thời gian đến phòng tập thì hãy tham khảo lịch tập sau của Fitness</h4>
+                    <b>+Lịch tập gym 5 Buổi/Tuần</b>
+                    <p>Lịch tập này ở mức trung bình, dành cho người có nhu cầu duy trì thể trạng, không tối ưu thể hình và ít tăng cơ:</p>
+                    <ul style="margin-left:30px;">
+                        <li>
+                            Buổi 1: Bụng, ngực
+                        </li>
+                        <li>
+                            Buổi 2: Cầu vai, xô lưng
+                        </li>
+                        <li>
+                            Buổi 3: Bụng, vai
+                        </li>
+                        <li>
+                            Buổi 4: Bắp chân, mông đùi
+                        </li>
+                        <li>
+                            Buổi 5: Bụng, cẳng tay, tay trước, tay sau
+                        </li>
+                    </ul>
+                    <p>Với lịch tập gym này, các bạn có thể chủ động sắp xếp nghĩ 2 Buổi/Tuần tùy theo lịch làm việc của mình</p>
+                    <!--Lịch Cho ngươì bận rộn-->
+                    <h3 style="color:cornflowerblue"><b>Tại sao các bạn phải xây dựng lịch tập gym</b></h3>
+                    <p>
+                        Fitness hiểu được rằng, sức khỏe là tài sản quý nhất của con người, một cơ thể khỏe mạnh là nền tảng vững chắc cho sự nghiệp thành công và cuộc sống trọn vẹn,
+                        Do đó , các bạn thường chọn tập gym để nhanh chóng có được thân hình đáng mơ ước và sức khỏe tốt nhất.
+                    </p>
+                    <!--Ảnh minh họa-->
+                    <img src="~/Content/ImgLT/BannerLT3.jpg" width="900px" height="500px" />
+                    <!--Ảnh minh họa-->
+                    <p>
+                        Sau khi tìm hiểu về các giáo án, và các tài liệu Fitness đã xây dựng lịch tập gym cho các bạn một cách
+                        bài bản và khoa học,giúp các bạn nhanh chóng đạt được kết quả tập luyện như ý muốn.
+                    </p>
+                    <p>
+                        Nếu các ban đang cần xây dựng cho mình một lịch tập gym chuẩn, mà vẫn không biết như thế nào thì hãy liên lạc ngay với Fitness nhé. Chúc các bạn thành công.
+                    </p>
+                </div>
+
+            </div>
+            <div style="float:right;width:20%;margin-top:-18%;">
+                @Html.Action("BaiVietMoiNhat", "HienThi")
+
+            </div>
+            <div class="clearfix "></div>
+        </div>
+
+    </div>

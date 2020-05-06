@@ -1,0 +1,59 @@
+﻿@model Gymer.Models.DinhDuong
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/ADMIN/Views/Layout/Layout.cshtml";
+}
+
+
+
+<b class="btn btn-danger container-fluid" style="font-size:30px;">Xóa bài viết</b>
+<div>
+   
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+          <b>Tiêu đề</b>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TieuDe)
+        </dd>
+
+        <dt>
+            <b>Tên thực phẩm</b>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenThucPham)
+        </dd>
+
+        <dt>
+            <b>Nội dung</b>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoiDung)
+        </dd>
+
+        <dd>
+            <b>Ảnh thực phẩm</b>
+        </dd>
+
+        <dd>
+            @Html.DisplayFor(Model => Model.AnhThucPham)
+        </dd>
+     
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-outline-dark "/> 
+            <br />
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

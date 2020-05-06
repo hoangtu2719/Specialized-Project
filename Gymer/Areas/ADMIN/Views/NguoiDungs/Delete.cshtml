@@ -1,0 +1,76 @@
+﻿@model Gymer.Models.NguoiDung
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/ADMIN/Views/Layout/Layout.cshtml";
+}
+
+
+<div>
+   <b class="btn btn-danger container-fluid" style="font-size:30px">Bạn có chắc muốn xóa</b>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <b >Tên người dùng</b>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenNguoiDung)
+        </dd>
+
+        <dt>
+            <b>Mật khẩu</b>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MatKhau)
+        </dd>
+
+        <dt>
+            <b>Nhập lại mật khẩu</b>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhapLaiMatKhau)
+        </dd>
+
+        <dt>
+           <b>Gmail</b>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gmail)
+        </dd>
+
+
+        <dt>
+            <b>Ngày sinh</b>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgaySinh)
+        </dd>
+
+        <dt>
+            <b>Điện thoại</b>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DienThoaiND)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-outline-dark" /> 
+            <br />
+            <div class="btn btn-outline-dark">
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+           
+        </div>
+    }
+</div>

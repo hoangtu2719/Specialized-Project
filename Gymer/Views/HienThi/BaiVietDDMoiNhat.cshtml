@@ -1,0 +1,13 @@
+﻿@using Gymer.Models;
+@model List<DinhDuong>
+
+
+
+@foreach(var item in Model)
+{
+    <a href="@Url.Action("ChiTietDD","ChiTietBaiVietDD", new {@madinhduong = item.Ma_DinhDuong })">
+        <b>@item.TenThucPham</b>
+        <img src="~/Content/ImgDD/@item.AnhThucPham" style="height:200px" />
+
+    </a>
+}

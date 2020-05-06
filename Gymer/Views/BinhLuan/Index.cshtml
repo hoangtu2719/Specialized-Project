@@ -1,0 +1,94 @@
+﻿@using Gymer.Models;
+@model List<Binhluan>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layout/Layout.cshtml";
+}
+
+
+
+
+<center>
+    <ul class="" style="width: 80%">
+        <li class="list-group-item active">Comment</li>
+        <li class="list-group-item" style="width:100%">
+            <div class="">
+                @using (Html.BeginForm("DangBinhLuan", "BinhLuan", FormMethod.Post))
+                {
+                    <img src="~/Content/Imguser/User.png" style="border-radius:100%;width:100px; height:100px; border:1px solid black; float: left" />
+
+                    <input type="text" name="NoiDungBinhLuan" style="width: 90%; height: 50px; float: right;margin-top: 2%" placeholder="Add comment..." class="form-control" />
+                    if (Session["NguoiDung"] != null)
+                    {
+
+                        <input type="submit" value="Comment" class="btn btn-danger" style="margin-top: 2%;float: left;margin-left: 1%" />
+                    }
+                    else
+                    {
+                        <a href="#" data-toggle="modal" data-target="#myModal"><input type="submit" value="Comment" class="btn btn-danger" style="margin-top: 2%;float: left;margin-left: 1%" /></a>
+                    }
+                }
+                <br />
+                <table class="table">
+
+                    @foreach (var itemcmt in Model)
+                    {
+                        <tr>
+                            <td>
+                                <div style="margin-left: 3%" class="alert alert-success">
+                                    <img src="~/Content/Imguser/User.png" style="border-radius:100%;width:40px; height:40px; border:1px solid black; float: left" />
+                                    <span style="margin-left: 15px;font-size: 16px;color: green; font-weight: bold">@itemcmt.NguoiDung.TenNguoiDung</span><br />
+                                    <span style="font-size: 15px; margin-left:10px;color: black">@Html.DisplayFor(modelItem => itemcmt.NoiDungBinhLuan)</span>
+                                    <span style="margin-left: 10px; float: right">@itemcmt.NgayBinhLuan</span><br />
+                                    <a data-toggle="collapse" data-target="#@itemcmt.MaBinhLuan" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" style="color: black; font-weight:bold;float: right;font-size: 10px;color: white" class="btn btn-danger">VIEW REPLY</a>
+
+                                </div>
+                                <div class="pos-f-t">
+                                    <div class="collapse" id="@itemcmt.MaBinhLuan">
+                                        @foreach (var itemrep in itemcmt.TraLois)
+                                        {
+                                            <div style="margin-left: 10%" class="alert alert-success">
+                                                <img src="~/Content/Imguser/User.png" style="border-radius:100%;width:40px; height:40px; border:1px solid black; float: left" />
+                                                <span style="margin-left: 15px;font-size: 16px;color: green; font-weight: bold">@itemrep.NguoiDung.TenNguoiDung</span><br />
+                                                <span style="margin-left: 15px;font-size: 16px;color: black;">@itemrep.NoiDung</span><br />
+                                                <span style="margin-left: 10px; float: right">@itemrep.NgayDang</span>
+                                            </div>
+                                        }
+                                        <br />
+                                        @using (Html.BeginForm("PostReply", "Comments", FormMethod.Post))
+                                        {
+                                            <input type="hidden" name="MaTraLoi" value="@itemcmt.MaBinhLuan" />
+                                            <input type="text" name="NoiDung" style="margin-left:5%; width: 96%; height: 50px" min="50" required class="form-control" placeholder="Reply..." />
+                                            if (Session["NguoiDung"] != null)
+                                            {
+                                                <input type="submit" value="" class="" style="margin-top: 2%;float: left;margin-left: 1%;background-color: white; border: 0px solid white" />
+                                            }
+                                            else
+                                            {
+                                                <a href="#" data-toggle="modal" data-target="#myModal"><input type="submit" value="" class="" style="margin-top: 2%;float: left;margin-left: 1%;background-color: white; border: 0px solid white" /></a>
+                                            }
+
+                                        }
+                                    </div>
+                                </div>
+
+                            </td>
+                        </tr>
+                    }
+                </table>
+
+               
+            </div>
+        </li>
+    </ul>
+</center>
+
+<!-- banner-bottom -->
+
+<!-- //banner-bottom -->
+<style>
+    .card-inner {
+        margin-left: 4rem;
+    }
+</style>
+

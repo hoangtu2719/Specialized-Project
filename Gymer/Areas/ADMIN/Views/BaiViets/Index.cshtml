@@ -1,0 +1,79 @@
+﻿@model IEnumerable<Gymer.Models.BaiViet>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/ADMIN/Views/Layout/Layout.cshtml";
+}
+
+
+<a href="/ADMIN/BaiViets/Create" class="btn btn-danger" style="width: 30%; height: 35px"><b style="color: white">THÊM BÀI VIẾT</b></a>
+<table class="table  table-bordered table-striped " >
+  
+        <tr>
+            <th>
+                <b>Nội Dung</b>
+            </th>
+            <th>
+                <b>Ảnh chủ đề</b>
+            </th>
+            <th>
+                <b>Ngày Đăng</b>
+            </th>
+            <th>
+                <b>Lượt Xem</b>
+            </th>
+
+            <th>
+                <B>Tiêu Đề</B>
+            </th>
+            <th>
+                <b>Nhóm Cơ</b>
+            </th>
+            <th>
+                <b>Tên Chủ Đề</b>
+            </th>
+            <th>
+                <b>Chỉnh Sửa</b>
+            </th>
+           
+        </tr>
+
+        @foreach (var item in Model)
+        {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.NoiDung)
+    </td>
+    <td>
+
+        <img src="~/Content/Img/@item.AnhChuDe" style="width: 100px; height: 100px"/>
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.NgayDang)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.LuotXem)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.TieuDe)
+    </td>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.DanhMuc.TenDanhMuc)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.TenChuDe)
+    </td>
+
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.MaBaiViet }) |
+        @Html.ActionLink("Details", "Details", new { id = item.MaBaiViet }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.MaBaiViet })
+    </td>
+
+</tr>
+        }
+
+   
+
+</table>

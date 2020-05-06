@@ -1,0 +1,26 @@
+﻿@using Gymer.Models;
+@model List<TinTuc>
+
+
+@foreach (var a in Model)
+{
+    <div class="w3ls-middle py-5" id="stats" >
+        <div class="container-fluid py-xl-5 py-lg-3">
+
+            <div class="row pt-xl-5">
+                <div class="col-lg-6 text-center mt-lg-3">
+                    <img src="@Url.Content("~/Content/Banner/" + a.HinhAnh)" alt="" class="img-fluid chef-img">
+                </div>
+                <div class="col-lg-4 pl-lg-5 mt-lg-0 mt-4">
+                    <div>
+                        <h4 style="font-family:Arial; font-size:80px; color:red"><b>@a.TieuDe</b></h4>
+                        <h6><b style="font-size:50px;">@a.Tieude2</b></h6>
+                        <p style="font-size:20px;"><b> @a.NoiDung</b></p>
+                    </div>
+                   
+                </div>
+                <div class="offset-lg-2"></div>
+            </div>
+        </div>
+    </div>
+}
