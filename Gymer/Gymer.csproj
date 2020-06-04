@@ -174,55 +174,52 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ADMIN.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Gym.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\BaiViet.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Gym.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\BaiVietKT.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Gym.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Binhluan.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Gym.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DanhMuc.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Gym.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DinhDuong.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Gym.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Gym.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Gym.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Gym.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Gym.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Gym.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Gym.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\KT.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Model1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Model1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Model1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
+      <DependentUpon>Gym.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\NguoiDung.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Gym.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PhanLoai.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\sysdiagram.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Gym.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TinTuc.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Gym.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TraLoi.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Gym.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -396,21 +393,22 @@
     <Content Include="Content\Layout\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\Layout\images\move-top.png" />
     <Content Include="Content\Layout\Menu.css" />
+    <Content Include="Content\Model\SQL_Gym.sql" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Content\StyleSheet1.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\Model1.Context.tt">
+    <Content Include="Models\Gym.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Gym.edmx</DependentUpon>
+      <LastGenOutput>Gym.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\Model1.tt">
+    <Content Include="Models\Gym.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
+      <DependentUpon>Gym.edmx</DependentUpon>
+      <LastGenOutput>Gym.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -460,12 +458,12 @@
     <Content Include="Areas\ADMIN\Views\BaiVietKTs\Details.cshtml" />
     <Content Include="Areas\ADMIN\Views\BaiVietKTs\Edit.cshtml" />
     <Content Include="Areas\ADMIN\Views\BaiVietKTs\Index.cshtml" />
-    <EntityDeploy Include="Models\Model1.edmx">
+    <EntityDeploy Include="Models\Gym.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+      <LastGenOutput>Gym.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
+    <Content Include="Models\Gym.edmx.diagram">
+      <DependentUpon>Gym.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />

@@ -34,7 +34,6 @@ namespace Gymer.Models
         public virtual DbSet<KT> KTs { get; set; }
         public virtual DbSet<NguoiDung> NguoiDungs { get; set; }
         public virtual DbSet<PhanLoai> PhanLoais { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TinTuc> TinTucs { get; set; }
         public virtual DbSet<TraLoi> TraLois { get; set; }
     }
