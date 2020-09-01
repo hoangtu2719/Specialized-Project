@@ -161,6 +161,7 @@
     <Compile Include="Controllers\BaiTapGymController.cs" />
     <Compile Include="Controllers\BaiVietKTController.cs" />
     <Compile Include="Controllers\BinhLuanController.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\ChiTietBaiTapController.cs" />
     <Compile Include="Controllers\ChiTietBaiVietDDController.cs" />
     <Compile Include="Controllers\DangXuatController.cs" />
@@ -512,6 +513,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\ADMIN\Models\" />
     <Folder Include="Areas\ADMIN\Views\Shared\" />
+    <Folder Include="Views\Blog\" />
     <Folder Include="Views\DangXuat\" />
   </ItemGroup>
   <ItemGroup>
