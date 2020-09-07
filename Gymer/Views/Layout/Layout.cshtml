@@ -47,40 +47,10 @@
 </head>
 
 <body id="home">
-
-
-    <script type="text/javascript">
-        function Plugin(option) {
-            return this.each(function () {
-                var $this = $(this)
-                var data = $this.data('bs.alert')
-
-                if (!data) $this.data('bs.alert', (data = new Alert(this)))
-                if (typeof option == 'string') data[option].call($this)
-
-                var dungyen = 0;
-                var dichuyen = "20px";
-                var diemchuyen = "text-wh text-uppercase mb-md-4 mb-3" + "class";
-                if (dungyen == diemchuyen) {
-                    dichuyen++;
-                    var diemtoi = "text-center text-wh py-sm-3 py-3";
-                }
-
-
-            })
-        }
-
-        var old = $.fn.alert
-
-        $.fn.alert = Plugin
-        $.fn.alert.Constructor = Alert
-    </script>
-
-
     <nav id="fixNav">
         <div id="home">
 
-            <header id="chuyenmau" ">
+            <header id="chuyenmau">
                 <div class="container-fluid">
                     <div class="header d-md-flex justify-content-between align-items-center py-sm-3 py-2 px-xl-5 px-lg-3 px-2">
                         <!-- logo -->
@@ -143,21 +113,13 @@
                                             </div>
                                         </div>
                                     </li>
-                                    @*<li>
-                                            <button onclick="document.getElementById('chuyenmau').style.backgroundColor=''">Trong suốt</button>
-                                            <button onclick="document.getElementById('chuyenmau').style.backgroundColor='darkslategray'">Bật màu</button>
-                                        </li>*@
+                              
                                 </ul>
                             </nav>
                         </div>
-                        <!-- //nav -->
                     </div>
                 </div>
             </header>
-
-
-            <!-- //header -->
-            <!-- banner -->
 
         </div>
     </nav>

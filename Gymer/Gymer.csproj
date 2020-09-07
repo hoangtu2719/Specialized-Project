@@ -165,6 +165,7 @@
     <Compile Include="Controllers\ChiTietBaiTapController.cs" />
     <Compile Include="Controllers\ChiTietBaiVietDDController.cs" />
     <Compile Include="Controllers\DangXuatController.cs" />
+    <Compile Include="Controllers\GopYPhanHoiController.cs" />
     <Compile Include="Controllers\HienThiController.cs" />
     <Compile Include="Controllers\LichTapGymController.cs" />
     <Compile Include="Controllers\NguoiDungController.cs" />
@@ -265,6 +266,7 @@
     <Content Include="Content\DangNhap\css\style.css" />
     <Content Include="Content\DangNhap\images\bg.jpg" />
     <Content Include="Content\IconMXH\Icon.css" />
+    <Content Include="Content\img to me\Tu.jpg" />
     <Content Include="Content\ImgBVKT\ATP.jpg" />
     <Content Include="Content\ImgBVKT\cnttkbb.jpg" />
     <Content Include="Content\ImgBVKT\Insulin.jpg" />
@@ -499,6 +501,7 @@
     <Content Include="Views\BaiVietKT\BaiVietKTMoiNhat.cshtml" />
     <Content Include="Views\BaiVietKT\ChiTietBaiVietKT.cshtml" />
     <Content Include="Views\BinhLuan\Index.cshtml" />
+    <Content Include="Views\GopYPhanHoi\GopYPhanHoi.cshtml" />
     <None Include="Views\Layout\Layout.cshtml" />
     <Content Include="Views\NguoiDung\DangNhap.cshtml" />
     <Content Include="Views\NguoiDung\DangKy.cshtml" />
