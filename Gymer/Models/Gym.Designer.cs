@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'D:\Môn học\Đo an co so nganh\Gymer\Gymer\Models\Gym.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\hoang\Source\Repos\Specialized-Project\Gymer\Models\Gym.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
